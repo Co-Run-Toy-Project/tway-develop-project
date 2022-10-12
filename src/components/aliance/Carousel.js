@@ -32,7 +32,7 @@ export default function Slider() {
   };
 
   useEffect(() => {
-    slideRef.current.style.transition = "all 0.35s ease-in";
+    slideRef.current.style.transition = "all 0.35s ease-out";
     slideRef.current.style.transform = `translateX(-${slideRange}px)`; // 백틱을 사용하여 슬라이드로 이동하는 에니메이션을 만듭니다.
   }, [currentSlide]);
 
@@ -46,7 +46,7 @@ export default function Slider() {
       <SliderContainer ref={slideRef}>
         {data.carousel.map((el) => (
           <>
-            <AlianceSlider key={el.id} title={el.title} desc={el.desc} img={el.img} />
+            <AlianceSlider key={el.title} title={el.title} desc={el.desc} img={el.img} />
           </>
         ))}
       </SliderContainer>
