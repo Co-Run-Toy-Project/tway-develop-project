@@ -1,15 +1,64 @@
 import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import AlianceSlider from "./AlianceSlider";
+
 import data from "data/afl_list.json";
+
 
 const TOTAL_SLIDES = 4; // 전체 슬라이드 개수(총3개. 배열로 계산)
 
 export default function Slider() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isRunning, setIsRunning] = useState(true) // 시작 정지
   const slideRef = useRef(null);
   const IMG_WIDTH = 404;
   const slideRange = currentSlide *IMG_WIDTH;
+
+  // 일정 시간 이후 반복
+  function useInterval(callback, delay) {
+      // ref 객체 생성
+      const savedCallback = useRef()
+
+      useEffect(() => {
+      // 새로 렌더링 할 때마다 새로운 callback을 ref 객체로 저장한다
+      savedCallback.current = callback
+      })
+
+      useEffect(() => {
+          function tick() {
+              // 최근 callback
+              savedCallback.current();
+          }
+
+          /*Using delay instead of isRunning because useEffect won't trigger a re-render when a boolean changes
+          Whereas delay here is a parameter which isn't a boolean, and changes depending on isRunning state. 
+          */
+          if (delay !== null) {
+              let timer = setInterval(tick, delay)
+              return () => clearInterval(timer)
+          }
+      }, [delay])
+  }
+
+  // 와 미친 됐다
+  // callback이 NextSlide랑 마찬가지인데 대체할 수 없을까?
+  const callback = () => {
+    if (currentSlide >= TOTAL_SLIDES) {
+      // 더 이상 넘어갈 슬라이드가 없으면
+      setCurrentSlide(0); // 1번째 사진으로 넘어갑니다.
+      // return;  // 클릭이 작동하지 않습니다.
+    } else {
+      // 아니면 1장씩 넘긴다
+      setCurrentSlide(currentSlide + 1);
+    }
+}
+
+  // isRunning이 true면 시작, 아니면 중지
+  useInterval(callback, isRunning ? 2000 : null)
+
+  const Pause = () => {
+    setIsRunning(!isRunning);
+  };
 
   // Next 버튼 클릭 시
   const NextSlide = () => {
@@ -18,6 +67,7 @@ export default function Slider() {
       setCurrentSlide(0); // 1번째 사진으로 넘어갑니다.
       // return;  // 클릭이 작동하지 않습니다.
     } else {
+      // 아니면 1장씩 넘긴다
       setCurrentSlide(currentSlide + 1);
     }
   };
@@ -27,20 +77,24 @@ export default function Slider() {
       setCurrentSlide(TOTAL_SLIDES); // 마지막 사진으로 넘어갑니다.
       // return;  // 클릭이 작동하지 않습니다.
     } else {
+      // 1장 전으로 돌린다
       setCurrentSlide(currentSlide - 1);
     }
   };
 
+
+  // slideRef가 뭘까 - useRef
   useEffect(() => {
     slideRef.current.style.transition = "all 0.35s ease-out";
-    slideRef.current.style.transform = `translateX(-${slideRange}px)`; // 백틱을 사용하여 슬라이드로 이동하는 에니메이션을 만듭니다.
+    // 백틱을 사용하여 슬라이드로 이동하는 에니메이션을 만듭니다.
+    slideRef.current.style.transform = `translateX(-${slideRange}px)`;
   }, [currentSlide]);
 
   return (
     <Container>
       <Right>
         <CarouselIcon onClick={PrevSlide} src="icon/btn_goods_prev.png" />
-        <CarouselIcon src="icon/btn_goods_pause2.png" />
+        <CarouselIcon onClick={Pause} src={isRunning ? "icon/btn_goods_pause2.png": "icon/btn_goods_play2.png"} />
         <CarouselIcon onClick={NextSlide} src="icon/btn_goods_next.png" />
       </Right>
       <SliderContainer ref={slideRef}>
