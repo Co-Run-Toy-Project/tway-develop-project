@@ -40,22 +40,6 @@ export default function Slider() {
       }, [delay])
   }
 
-  // 와 미친 됐다
-  // callback이 NextSlide랑 마찬가지인데 대체할 수 없을까?
-  const callback = () => {
-    if (currentSlide >= TOTAL_SLIDES) {
-      // 더 이상 넘어갈 슬라이드가 없으면
-      setCurrentSlide(0); // 1번째 사진으로 넘어갑니다.
-      // return;  // 클릭이 작동하지 않습니다.
-    } else {
-      // 아니면 1장씩 넘긴다
-      setCurrentSlide(currentSlide + 1);
-    }
-}
-
-  // isRunning이 true면 시작, 아니면 중지
-  useInterval(callback, isRunning ? 2000 : null)
-
   const Pause = () => {
     setIsRunning(!isRunning);
   };
@@ -82,13 +66,17 @@ export default function Slider() {
     }
   };
 
-
   // slideRef가 뭘까 - useRef
   useEffect(() => {
     slideRef.current.style.transition = "all 0.35s ease-out";
     // 백틱을 사용하여 슬라이드로 이동하는 에니메이션을 만듭니다.
     slideRef.current.style.transform = `translateX(-${slideRange}px)`;
   }, [currentSlide]);
+
+    // isRunning이 true면 시작, 아니면 중지
+    // callback이 NextSlide 기능과 같으므로 NextSlide를 집어넣었다.
+    useInterval(NextSlide, isRunning ? 2000 : null)
+
 
   return (
     <Container>
