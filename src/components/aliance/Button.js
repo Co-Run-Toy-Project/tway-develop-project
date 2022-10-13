@@ -49,7 +49,7 @@ const Icon = styled.img`
 
 `;
 
-function Button({key, content, name}) {
+function Button({content, name}) {
   return (
     <>
         <IconWrapper>
