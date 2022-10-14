@@ -4,6 +4,11 @@ import styled from 'styled-components';
 import { ReactComponent as NavUser } from '../../../assets/icon/NavUser.svg'
 import { ReactComponent as Hamburger } from '../../../assets/icon/Hamburger.svg'
 import { ReactComponent as NavMagnifier } from '../../../assets/icon/NavMagnifier.svg'
+// import useHover from './useHover'
+
+export default {
+  title: "Hook/useHover",
+};
 
 import MenuModal from './MenuModal'
 
@@ -96,13 +101,17 @@ useEffect(() => {
         setModalOpen(true);
     };
 
+    // const [ref, hover] = useHover();
 
   return (
 
-    <Side>
-        <div>
-            <button onClick={showModal}>모달 띄우기</button>
+    <Side 
+    // ref={ref}
+    >
+        <div className="sel_lang_wrap">
+            <div onClick={showModal}>모달 띄우기</div>
             {modalOpen && <MenuModal setModalOpen={setModalOpen} />}
+            {/* {hover  ? <div className="langBtn "></div> : <div className="langBtnHover"></div>} */}
         </div>
 
       {/* <div 
@@ -123,7 +132,6 @@ useEffect(() => {
       </div> */}
       <div className="util_menu">
         <a href="/" className="btn_login">
-          {/* <img className={`imgColor ${isOn ? null : ' imgColorHover'}`} src="/icon/ico_top_login.png"></img>{' '} */}
           <NavUser fill={ScrollActive ? "black" : "white"}/>
         </a>
         <a href="/" className="btn_search">
