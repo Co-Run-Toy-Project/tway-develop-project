@@ -7,6 +7,7 @@ import Button from './Button';
 import AfflImage from './AfflImage';
 import Carousel from './Carousel';
 import theme from 'data/theme';
+import data from 'data/afl_list.json';
 
 const AlianceTitle = styled.h1`
   text-align: center;
@@ -20,12 +21,13 @@ const Wrapper = styled.div`
 
 const TopWrapper = styled.div`
   display: flex;
-  width: calc(100%-50px);
+  width: 1200px;
   height: 210px;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   margin-top: 32px;
+  margin: 0 auto;
 `;
 
 const BottomWrapper = styled.div`
@@ -33,6 +35,8 @@ const BottomWrapper = styled.div`
   flex-direction: row;
   width: 1200px;
   height: 368px;
+
+  margin: 0 auto;
 `;
 
 export default function AfflIcon() {
@@ -41,7 +45,9 @@ export default function AfflIcon() {
       <ThemeProvider theme={theme}>
         <AlianceTitle>제휴서비스</AlianceTitle>
         <TopWrapper>
-          <Button />
+        {data.afl.map((item) => (
+          <Button key={item.name} content={item.content} name={item.name} />
+        ))}
         </TopWrapper>
 
         <BottomWrapper>
