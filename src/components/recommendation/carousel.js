@@ -14,7 +14,7 @@ import playBtn from 'assets/icon/bg_play2.png'
 const AlbumContainer = styled.ul`
   height : 450px;
   margin: 0;
-  padding: 0;
+  padding-top: 15px;
 
   .slick-slide{
     margin: 0;
@@ -55,7 +55,7 @@ const AlbumContainer = styled.ul`
   box-sizing: content-box;
   position: absolute;
   padding-top: 4.8px;
-  right: 41%;
+  right: 38%;
 }
 
 `;
