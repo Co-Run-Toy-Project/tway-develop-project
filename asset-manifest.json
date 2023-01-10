@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tway-develop-project/static/css/main.bc33dea0.css",
-    "main.js": "/tway-develop-project/static/js/main.565cd494.js",
+    "main.js": "/tway-develop-project/static/js/main.3812fa96.js",
     "static/media/386844ba-b61d-448e-947a-eb7db24562a1.png": "/tway-develop-project/static/media/386844ba-b61d-448e-947a-eb7db24562a1.d9f91f8d1dd846278b29.png",
     "static/media/118237ee-f460-4f9b-9dd0-1e9988079080.png": "/tway-develop-project/static/media/118237ee-f460-4f9b-9dd0-1e9988079080.357fe738bf25b1a1972c.png",
     "static/media/4cb5c25c-4796-4c09-a53a-c638afe4a664.png": "/tway-develop-project/static/media/4cb5c25c-4796-4c09-a53a-c638afe4a664.faeefd7dc416c7e1472e.png",
@@ -26,10 +26,10 @@
     "static/media/NavMagnifier.svg": "/tway-develop-project/static/media/NavMagnifier.e95670f439c31622914003ab6d5935dc.svg",
     "static/media/NavUser.svg": "/tway-develop-project/static/media/NavUser.3b1c8d15728758e6c46209d5a0b3ce24.svg",
     "main.bc33dea0.css.map": "/tway-develop-project/static/css/main.bc33dea0.css.map",
-    "main.565cd494.js.map": "/tway-develop-project/static/js/main.565cd494.js.map"
+    "main.3812fa96.js.map": "/tway-develop-project/static/js/main.3812fa96.js.map"
   },
   "entrypoints": [
     "static/css/main.bc33dea0.css",
-    "static/js/main.565cd494.js"
+    "static/js/main.3812fa96.js"
   ]
 }
