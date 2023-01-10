@@ -129,13 +129,7 @@ const GroupCheck = () => {
 
   return (
     <CheckPoint onClick={groupChecker} className={isCheck ? 'checked pointer' : 'pointer'}>
-      <img
-        src={
-          isCheck
-            ? process.env.PUBLIC_URL + 'icon/ico_checkbox_group.png'
-            : process.env.PUBLIC_URL + 'icon/ico_checkbox_ none.png'
-        }
-      ></img>
+      <img src={isCheck ? './icon/ico_checkbox_group.png' : './icon/ico_checkbox_none.png'}></img>
       <div className={isCheck ? 'checked' : ''}>단체(10명이상)</div>
     </CheckPoint>
   );
@@ -208,7 +202,7 @@ const DisCountInput = () => {
     <SaleCodeBox>
       <input type="text" onChange={handleChange} value={inputValue} placeholder="할인코드 입력"></input>
       <IntroBox>
-        <img src={process.env.PUBLIC_URL + 'icon/ico_tooltip_gray.png'}></img>
+        <img src="icon/ico_tooltip_gray.png"></img>
         <div className="arrow_box">말풍선 테스트</div>
       </IntroBox>
     </SaleCodeBox>
@@ -234,7 +228,7 @@ const PointSelector = styled.div`
     padding-left: 20px;
     width: 220px;
     height: 60px;
-    background-image: url('../../assets/icon/ico_btn_pin.png');
+    background-image: url('assets/icon/ico_btn_pin.png');
     background-repeat: no-repeat;
     /* background-size: 22px; */
   }
@@ -296,7 +290,7 @@ function FlightBookZone() {
   return (
     <BookZone>
       <BookZoneHeader>
-        <img src={process.env.PUBLIC_URL + 'images/bg_main_booking02.png'}></img>
+        <img src="images/bg_main_booking02.png" />
       </BookZoneHeader>
       <BookZoneBody>
         <BookOption>
