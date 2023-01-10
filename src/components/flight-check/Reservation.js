@@ -32,7 +32,7 @@ function Reservation() {
         <FlightBookZone></FlightBookZone>
       </div>
       <div className="video__zone">
-        <video src={process.env.PUBLIC_URL + 'images/main_video.mp4'} className="video"></video>
+        <video src="./images/main_video.mp4" className="video"></video>
       </div>
     </BackGround>
   );
