@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/tway-develop-project/static/css/main.bc33dea0.css",
+    "main.js": "/tway-develop-project/static/js/main.39a9de27.js",
+    "static/media/386844ba-b61d-448e-947a-eb7db24562a1.png": "/tway-develop-project/static/media/386844ba-b61d-448e-947a-eb7db24562a1.d9f91f8d1dd846278b29.png",
+    "static/media/118237ee-f460-4f9b-9dd0-1e9988079080.png": "/tway-develop-project/static/media/118237ee-f460-4f9b-9dd0-1e9988079080.357fe738bf25b1a1972c.png",
+    "static/media/4cb5c25c-4796-4c09-a53a-c638afe4a664.png": "/tway-develop-project/static/media/4cb5c25c-4796-4c09-a53a-c638afe4a664.faeefd7dc416c7e1472e.png",
+    "static/media/2ec20e73-1d02-4c88-9659-31fcaf81fa5f.jpg": "/tway-develop-project/static/media/2ec20e73-1d02-4c88-9659-31fcaf81fa5f.330311b5593fa03f0631.jpg",
+    "static/media/7ddf7d37-4adb-4c2f-9ac0-b92bc0f3ff36.jpg": "/tway-develop-project/static/media/7ddf7d37-4adb-4c2f-9ac0-b92bc0f3ff36.a716f20a4e55f5965a26.jpg",
+    "static/media/1f4530f7-4e4c-494c-9a60-51663f2d0120.jpg": "/tway-develop-project/static/media/1f4530f7-4e4c-494c-9a60-51663f2d0120.0a597885355e95f3fc74.jpg",
+    "static/media/ca02ff6d-c4de-4f21-8973-1535edc7f69c.jpg": "/tway-develop-project/static/media/ca02ff6d-c4de-4f21-8973-1535edc7f69c.2862a56c0f13cf4e4416.jpg",
+    "static/media/0908a425-b0c7-4292-965a-44e2a081502e.jpg": "/tway-develop-project/static/media/0908a425-b0c7-4292-965a-44e2a081502e.1ad7d947a45f5782ef64.jpg",
+    "static/media/e5d99ad3-1171-43b5-a175-fd80f3ea9234.jpg": "/tway-develop-project/static/media/e5d99ad3-1171-43b5-a175-fd80f3ea9234.a96273b6550e36b342e8.jpg",
+    "static/media/0ad33585-8f1a-410f-a5f6-fd3a08cc6f29.jpg": "/tway-develop-project/static/media/0ad33585-8f1a-410f-a5f6-fd3a08cc6f29.89b6062195e8ea2a4aeb.jpg",
+    "static/media/7603458d-4ab4-4a7e-ab7d-510baecd8998.jpg": "/tway-develop-project/static/media/7603458d-4ab4-4a7e-ab7d-510baecd8998.d6470c2542b27b170c6d.jpg",
+    "static/media/2f36ff33-21c7-46ed-821a-a1abf6f11505.jpg": "/tway-develop-project/static/media/2f36ff33-21c7-46ed-821a-a1abf6f11505.5a7f19d331f914dedfee.jpg",
+    "static/media/7b9e4206-db0d-4213-875f-58161e71fd62.jpg": "/tway-develop-project/static/media/7b9e4206-db0d-4213-875f-58161e71fd62.94da952ca7c5eeefc329.jpg",
+    "static/media/7ac7dc5d-3311-4409-92b9-663b23289d93.jpg": "/tway-develop-project/static/media/7ac7dc5d-3311-4409-92b9-663b23289d93.1efd72a3fdfa33ac086c.jpg",
+    "static/media/1571374d-6fcd-4130-810d-e707bd6683fa.jpg": "/tway-develop-project/static/media/1571374d-6fcd-4130-810d-e707bd6683fa.f6788525abee09f81633.jpg",
+    "static/media/slick.svg": "/tway-develop-project/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/tway-develop-project/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/tway-develop-project/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/tway-develop-project/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/tway-develop-project/index.html",
+    "static/media/Hamburger.svg": "/tway-develop-project/static/media/Hamburger.32a7b65bf21a497d30c6e05f78463438.svg",
+    "static/media/NavMagnifier.svg": "/tway-develop-project/static/media/NavMagnifier.e95670f439c31622914003ab6d5935dc.svg",
+    "static/media/NavUser.svg": "/tway-develop-project/static/media/NavUser.3b1c8d15728758e6c46209d5a0b3ce24.svg",
+    "main.bc33dea0.css.map": "/tway-develop-project/static/css/main.bc33dea0.css.map",
+    "main.39a9de27.js.map": "/tway-develop-project/static/js/main.39a9de27.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bc33dea0.css",
+    "static/js/main.39a9de27.js"
+  ]
+}
