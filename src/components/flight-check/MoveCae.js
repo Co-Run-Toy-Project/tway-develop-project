@@ -80,9 +80,9 @@ const ButtonZone = styled.div`
 
 function MoveCae() {
   const images = useRef([
-    {src: process.env.PUBLIC_URL + 'images/0cc6d99a-d43c-44a2-9407-372cb7835a42.png'},
-    {src: process.env.PUBLIC_URL + 'images/85bd61d2-9d97-4354-a8e7-9e5000c15c50.png'},
-    {src: process.env.PUBLIC_URL + 'images/cc14bfa7-8582-4acf-93fb-ea9ae24bebac.png'},
+    {src: 'asset/images/0cc6d99a-d43c-44a2-9407-372cb7835a42.png'},
+    {src: 'asset/images/85bd61d2-9d97-4354-a8e7-9e5000c15c50.png'},
+    {src: 'asset/images/cc14bfa7-8582-4acf-93fb-ea9ae24bebac.png'},
   ]);
 
   const [current, setCurrent] = useState(0);
